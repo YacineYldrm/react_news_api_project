@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { v4 as uuidv4} from 'uuid'
+import './NewsList.scss'
 
 const NewsList = () => {
 
@@ -23,7 +24,7 @@ const NewsList = () => {
         <section className="news_list_wrapper">
             <h2>Search results for "{searchInput}"</h2>
             {newsData?.articles.map((article) => (
-                <div className="single_news_container" key={uuidv4()}>
+                <div className="single_news_wrapper" key={uuidv4()}>
                     <h2>{article.title}</h2>
                     <img src={article.urlToImage} />
                     <p>{article.description}</p>

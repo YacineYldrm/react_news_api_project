@@ -1,0 +1,101 @@
+header
+{
+    background: linear-gradient(to left, white,#F3EFE0);
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 5%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.599);
+
+    a
+    {
+        text-decoration: none;
+        h1
+        {
+            color: #222222;
+            font-size: 62px;
+        }  
+    }
+
+    form
+    {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        input
+        {
+            height: 5vh;
+            border: none;
+            box-shadow: inset 1px 2px 0px 0px #222222;
+            padding: 12px;
+            flex-basis: 400px;
+            font-size: 1rem;
+            background-color: white;
+            transition: all 0.05s linear;
+            
+            &:hover
+            {
+                box-shadow: inset 2px 4px 2px 0px #222222;
+            }
+
+            &:focus
+            {
+                outline: none;
+                box-shadow: inset 2px 4px 2px 0px #222222;
+            }
+            
+        }
+
+        select
+        {
+            color: white;
+            height: 5vh;
+            flex-basis: 200px;
+            padding: 12px;
+            background-color: #434242;
+            font-size: 1rem;
+            box-shadow: 1px 3px 0px 0px #222222;
+            transition: all 0.05s linear;
+            
+                &:focus
+                {
+                    outline: none;
+                }
+            
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 2px 5px 0px 0px #222222;
+                }
+            
+                &:active {
+                    transform: translateY(2px);
+                    box-shadow: none
+                }
+        }
+
+        > a
+        {
+            color:#F3EFE0;
+            background: #22A39F;
+            padding: 12px 32px;
+            font-size: 1rem;
+            box-shadow: 1px 3px 0px 0px #222222;
+            transition: all 0.05s linear;
+
+            &:hover
+            {
+                transform: translateY(-2px);
+                box-shadow: 2px 5px 0px 0px #222222;
+            }
+
+            &:active
+            {
+                transform: translateY(2px);
+                box-shadow: none
+            }
+        }
+    }
+}

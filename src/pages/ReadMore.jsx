@@ -1,4 +1,5 @@
 import { NavLink, Link, useLocation } from "react-router-dom";
+import './ReadMore.scss'
 
 export const ReadMore = () => {
 
@@ -7,11 +8,12 @@ export const ReadMore = () => {
 
     // render component
     return ( 
-        <section>
+        <section className="read_more_wrapper">
             <NavLink to='/'>Go Back</NavLink>
             <h2>{article.title}</h2>
+            <img src={article.urlToImage} alt="" />
             <p>{article.content}</p>
-            <Link to={article.url} target="_blank">{article.source.name}</Link>
+            <Link to={article.url} target="_blank">Source: <span>{article.source.name}</span> </Link>
 
         </section>
     );
