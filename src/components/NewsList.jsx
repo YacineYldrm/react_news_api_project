@@ -12,7 +12,7 @@ const NewsList = () => {
 
     // fetch request on search event
     useEffect(() => {
-        fetch(`https://newsapi.org/v2/everything?q=${searchInput}&language=${languageInput}&apiKey=`) // <============== INSERT YOUR API KEY HERE ==============<
+        fetch(`https://newsapi.org/v2/everything?q=${searchInput}&language=${languageInput}&apiKey=${import.meta.env.VITE_API_KEY}`) // <============== INSERT YOUR API KEY HERE ==============<
             .then(response => response.json())
             .then(apiData => setNewsData(apiData))
             .catch((error) => console.log(error));
